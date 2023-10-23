@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import serial
-import time 
+import time
 import struct 
 
 ser = serial.Serial('/dev/ttyUSB0')  # open serial port
@@ -20,6 +20,6 @@ while ser.is_open:
             avg = avg * 2
         oe = e
 
-        print(str(e) + " -> " + str(n) + " Avg: " + str(avg))
+        print(f"{oe} -> {str(n)} Avg: {str(avg)}")
     except:
         pass
